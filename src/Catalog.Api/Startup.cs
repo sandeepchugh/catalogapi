@@ -8,7 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Shop.Catalog.Api.Repositories;
+using Shop.Catalog.Domain.Repositories;
+using Shop.Catalog.Repositories.MySql.Repositories;
 
 namespace Shop.Catalog.Api
 {
@@ -25,8 +26,8 @@ namespace Shop.Catalog.Api
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionStringName = "DefaultConnection";
-            services.AddTransient<IDbConnectionFactory,SqlServerConnectionFactory>(
-                x=> new SqlServerConnectionFactory(Configuration,
+            services.AddTransient<IDbConnectionFactory, MySqlConnectionFactory>(
+                x=> new MySqlConnectionFactory(Configuration,
                         connectionStringName));
 
             services.AddTransient<IProductRepository, ProductRepository>();

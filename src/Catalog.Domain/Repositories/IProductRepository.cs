@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Shop.Catalog.Api.Models;
+using Shop.Catalog.Domain.Entities;
 
-namespace Shop.Catalog.Api.Repositories
+namespace Shop.Catalog.Domain.Repositories
 {
     public interface IProductRepository
     {

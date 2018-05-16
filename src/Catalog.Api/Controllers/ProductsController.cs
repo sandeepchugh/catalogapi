@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Shop.Catalog.Api.Models;
-using Shop.Catalog.Api.Repositories;
+using Shop.Catalog.Domain.Entities;
+using Shop.Catalog.Domain.Repositories;
 
 namespace Shop.Catalog.Api.Controllers
 {

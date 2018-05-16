@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Moq;
 using Shop.Catalog.Api.Controllers;
-using Shop.Catalog.Api.Models;
-using Shop.Catalog.Api.Repositories;
+using Shop.Catalog.Domain.Entities;
+using Shop.Catalog.Domain.Repositories;
 using Xunit;
 
 namespace Shop.Catalog.Api.Tests.Unit

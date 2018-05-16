@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
-using Shop.Catalog.Api.Models;
+using Shop.Catalog.Domain.Entities;
+using Shop.Catalog.Domain.Repositories;
 
-namespace Shop.Catalog.Api.Repositories
+namespace Shop.Catalog.Repositories.MySql.Repositories
 {
     public class ProductRepository : IProductRepository
     {

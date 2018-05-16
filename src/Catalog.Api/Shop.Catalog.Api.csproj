@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +19,11 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Catalog.Domain\Shop.Catalog.Domain.csproj" />
+    <ProjectReference Include="..\Catalog.Repositories.MySql\Shop.Catalog.Repositories.MySql.csproj" />
   </ItemGroup>
 
 </Project>
