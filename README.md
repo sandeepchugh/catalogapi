@@ -16,17 +16,9 @@ Generic product catalog api used by the shopping website
 > Change the path under "volumes:" to the data folder on your machine. Path is case sensitive and should match the folder case 
 >
 >  mysql:
->    image: mysql
->    ports:
->      - "3306:3306"
->    restart: always
->    environment:
->       MYSQL_ROOT_PASSWORD: "rootpwd"
->       MYSQL_DATABASE: "catalog"
->       MYSQL_USER: "catalogapiuser"
->       MYSQL_PASSWORD: "catalogapipwd"
->       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+>  
 >    volumes:
+>
 >      - D:\Dev\shop\mysqldata:/var/lib/mysql
 
 - run the following command to bring up mysql in a container
