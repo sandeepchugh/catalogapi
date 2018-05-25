@@ -15,7 +15,7 @@ Generic product catalog api used by the shopping website
 - fix path in docker-compose-mysql.yml. 
 > Change the path under mysql => "volumes:" to the data folder on your machine. Path is case sensitive and should match the folder case 
 >
->  -  volumes:
+>    volumes:
 >
 >      - D:\Dev\shop\mysqldata:/var/lib/mysql
 
