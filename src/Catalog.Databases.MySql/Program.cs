@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using DbUp;
 
-namespace Catalog.Databases.MySql
+namespace Shop.Catalog.Databases.MySql
 {
     public class Program
     {

@@ -36,7 +36,7 @@ namespace Shop.Catalog.Api.Tests.Unit
         {
             var upc = "12345";
             var mockProductRepository = new Mock<IProductRepository>();
-            var mockProduct = GetProducts().Where(x => x.Upc == upc)?.FirstOrDefault();
+            var mockProduct = GetProducts().Where(x => x.ProductUpc == upc)?.FirstOrDefault();
             mockProductRepository.Setup(x => x.GetProduct(It.Is<string>(y=>y.Equals(upc))))
                 .Returns(Task.FromResult(mockProduct));
 
@@ -47,9 +47,9 @@ namespace Shop.Catalog.Api.Tests.Unit
             Assert.NotNull(product);
             Assert.Equal(mockProduct.SalePrice, product.SalePrice);
             Assert.Equal(mockProduct.ListPrice, product.ListPrice);
-            Assert.Equal(mockProduct.Upc, product.Upc);
-            Assert.Equal(mockProduct.Category, product.Category);
-            Assert.Equal(mockProduct.Name, product.Name);
+            Assert.Equal(mockProduct.ProductUpc, product.ProductUpc);
+            Assert.Equal(mockProduct.Description, product.Description);
+            Assert.Equal(mockProduct.ProductName, product.ProductName);
         }
 
         private IEnumerable<Product> GetProducts()
@@ -58,17 +58,17 @@ namespace Shop.Catalog.Api.Tests.Unit
             {
                 new Product
                 {
-                    Category = "Movies",
-                    Name = "Mission Impossible",
-                    Upc = "12345",
+                    Description = "Movies",
+                    ProductName = "Mission Impossible",
+                    ProductUpc = "12345",
                     ListPrice = 20.99m,
                     SalePrice = 16.99m
                 },
                 new Product
                 {
-                    Category = "Movies",
-                    Name = "Mission Impossible 2",
-                    Upc = "34567",
+                    Description = "Movies",
+                    ProductName = "Mission Impossible 2",
+                    ProductUpc = "34567",
                     ListPrice = 22.99m,
                     SalePrice = 18.99m
                 }

@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  loadbalancer:
+    image: dockercloud/haproxy:1.2.1
+    ports:
+      - "80:80"
+    links:
+      - catalogapi
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - catalogapi_network
+
+  catalogapi:
+    image: catalogapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - catalogapi_network
+
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+       MYSQL_ROOT_PASSWORD: "rootpwd"
+       MYSQL_DATABASE: "catalog"
+       MYSQL_USER: "catalogapiuser"
+       MYSQL_PASSWORD: "catalogapipwd"
+       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+    volumes:
+      - D:\Dev\shop\mysqldata:/var/lib/mysql
+
+networks:
+  catalogapi_network:
+    driver: bridge

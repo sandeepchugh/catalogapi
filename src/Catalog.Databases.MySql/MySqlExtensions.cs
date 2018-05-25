@@ -4,7 +4,7 @@ using DbUp;
 using DbUp.Engine.Output;
 using MySql.Data.MySqlClient;
 
-namespace Catalog.Databases.MySql
+namespace Shop.Catalog.Databases.MySql
 {
     public static class MySqlExtensions
     {

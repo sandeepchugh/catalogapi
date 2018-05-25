@@ -31,7 +31,7 @@ namespace Shop.Catalog.Repositories.MySql.Repositories
         public async Task<Product> GetProduct(string upc)
         {
             Product product;
-            var query = "SELECT * FROM Products WHERE Upc=@upc";
+            var query = "SELECT * FROM Products WHERE ProductUpc=@upc";
             using (IDbConnection connection = _connectionFactory.CreateConnection())
             {
                 product = await connection.QuerySingle(query, upc);
