@@ -29,3 +29,14 @@ Generic product catalog api used by the shopping website
 ### Setup database 'catalog'
 
 - build solution and run Catalog.Databases.MySql project to setup database
+
+### Run catalog api
+
+- set Shop.Catalog.Api as startup solution and run in visual studio
+OR
+- navigate to Shop.Catalog.Api folder in command and execute the following
+> dotnet restore
+> 
+> dotnet build
+> 
+> dotnet run
