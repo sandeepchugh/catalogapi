@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\Script0001 - Create Tables.sql" />
+    <None Remove="Scripts\Script0002 - Default Feed.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Script0001 - Create Tables.sql" />
+    <EmbeddedResource Include="Scripts\Script0002 - Default Feed.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="dbup" Version="4.1.0" />
     <PackageReference Include="dbup-mysql" Version="4.1.0" />
   </ItemGroup>

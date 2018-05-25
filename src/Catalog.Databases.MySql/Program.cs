@@ -12,13 +12,13 @@ namespace Catalog.Databases.MySql
         {
             // TODO: Use Core 2.0 configuration api
             var connectionString =
-                args.FirstOrDefault()??ConfigurationManager.ConnectionStrings["Products"].ConnectionString;
+                args.FirstOrDefault()??ConfigurationManager.ConnectionStrings["catalog"].ConnectionString;
 
-            EnsureDatabase.For.SqlDatabase(connectionString);
+            EnsureDatabase.For.MySqlDatabase(connectionString);
 
             var upgrader =
                 DeployChanges.To
-                    .SqlDatabase(connectionString)
+                    .MySqlDatabase(connectionString)
                     .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
                     .LogToConsole()
                     .Build();

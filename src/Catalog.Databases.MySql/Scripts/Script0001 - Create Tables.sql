@@ -4,8 +4,8 @@
   `ProductName` VARCHAR(45) NULL,
   `ThumbnailImage` VARCHAR(200) NULL,
   `LargeImage` VARCHAR(200) NULL,
-  `ListPrice` DECIMAL NULL,
-  `SalePrice` DECIMAL NULL,
+  `ListPrice` FLOAT(8,2) NULL,
+  `SalePrice` FLOAT(8,2) NULL,
   `Description` TEXT NULL,
   PRIMARY KEY (`ProductId`),
   UNIQUE INDEX `ProductUpc_UNIQUE` (`ProductUpc` ASC));
