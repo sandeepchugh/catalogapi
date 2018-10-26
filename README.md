@@ -1,4 +1,4 @@
-# shop-api-catalog
+# shop-catalog-api
 Generic product catalog api used by the shopping website
 
 ## Setup
